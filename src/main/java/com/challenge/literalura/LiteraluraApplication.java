@@ -4,6 +4,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.challenge.literalura.principal.Principal;
+
 @SpringBootApplication
 public class LiteraluraApplication implements CommandLineRunner {
 
@@ -13,6 +15,8 @@ public class LiteraluraApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		Principal principal = new Principal();
+		principal.menu();
 
 	}
 }
