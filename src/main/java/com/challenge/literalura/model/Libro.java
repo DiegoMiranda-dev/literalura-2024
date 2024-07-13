@@ -1,12 +1,30 @@
 package com.challenge.literalura.model;
 
-import java.util.List;
+import jakarta.persistence.*;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Entity
+@Table(name = "libros")
 public class Libro {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(unique = true)
     private String titulo;
     private List<String> autores;
     private List<String> lenguajes;
     private String descargas;
+
+    public Libro(DatosResultados datosResultados) {
+        this.titulo = datosResultados.resultados().get(0).titulo();
+        this.autores = datosResultados.resultados().get(0).autores().stream().map(DatosResultados.DatosLibro.Autor::nombre).toList();
+        this.lenguajes = datosResultados.resultados().get(0).lenguajes();
+        this.descargas = datosResultados.resultados().get(0).descargas();
+
+    }
+
 
     public String getTitulo() {
         return titulo;
