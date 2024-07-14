@@ -2,18 +2,11 @@
 ![Logo_con_inciales del proyecto Literalura](https://github.com/user-attachments/assets/bcc2891d-4c7f-4999-bbb6-f0b5dbf234b5)
 ¡Literalura es una aplicación de consola que permite consultar información de cientos de libros! :) 
 
-![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green)
-
-![GitHub Org's stars](https://img.shields.io/github/stars/camilafernanda?style=social)
-
- ##Índice
+<h2>Índice</h2>
  
 1. [Funcionalidades](#funcionalidades)
 2. [Tecnologías Utilizadas](#tecnologías-utilizadas)
-3. [Configuración](#configuración)
-4. [Pasos para ejecutar](#pasos-para-ejecutar)
-5. [Contribución](#contribución)
-6. [Contacto](#contacto)
+
 
 ## Funcionalidades
 
