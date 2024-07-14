@@ -18,7 +18,9 @@ public record DatosResultados(@JsonAlias("results") List<DatosLibro> resultados)
 
         @JsonIgnoreProperties(ignoreUnknown = true)
         public record Autor(
-                @JsonAlias("name") String nombre
+                @JsonAlias("name") String nombre,
+                @JsonAlias("birth_year") Integer anoNacimiento,
+                @JsonAlias("death_year") Integer anoMuerte
         ) {
         }
 
