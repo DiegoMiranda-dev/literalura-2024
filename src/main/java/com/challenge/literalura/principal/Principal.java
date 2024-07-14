@@ -73,22 +73,30 @@ public class Principal {
         List<Libro> libros = repositorio.findAll();
         if (libros.isEmpty()) {
             System.out.println("No hay libros guardados \uD83E\uDD21 \uD83E\uDD21");
+            return;
         } else {
             System.out.println("-------- ✅ Libros guardados por idioma ✅ --------");
             System.out.println("Ingresa el idioma a buscar \uD83D\uDCD6");
             String idioma = sc.nextLine();
-            libros.forEach(l -> {
-                if (l.getLenguajes().contains(idioma)) {
-                    System.out.println("Título: " + l.getTitulo() +
-                            "\nAutores: " + l.getAutores() +
-                            "\nLenguajes: " + l.getLenguajes() +
-                            "\nDescargas: " + l.getDescargas() +
+
+            boolean encontrado = false;
+
+            for (Libro libro : libros) {
+                if (libro.getLenguajes().contains(idioma)) {
+                    System.out.println("Título: " + libro.getTitulo() +
+                            "\nAutores: " + libro.getAutores() +
+                            "\nLenguajes: " + libro.getLenguajes() +
+                            "\nDescargas: " + libro.getDescargas() +
                             "\n-----------------------------------");
-                } else {
-                    System.out.println("No se encontraron libros en ese idioma \uD83E\uDD21");
+                    encontrado = true; // Se encontró al menos un libro en el idioma
                 }
-            });
+            }
+            if (!encontrado) {
+                System.out.println("No se encontraron libros en el idioma ingresado \uD83D\uDEA9");
+            }
+
         }
+
     }
 
     private void autoresVivosEnPeriodoTiempo() {
