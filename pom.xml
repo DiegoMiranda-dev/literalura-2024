@@ -11,7 +11,7 @@
 	<groupId>com.challenge</groupId>
 	<artifactId>literalura</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>literalura</name>
+	<nombre>literalura</nombre>
 	<description>repositorio-de-libros</description>
 	<url/>
 	<licenses>
