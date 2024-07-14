@@ -22,8 +22,7 @@
 - Java
 - Spring Boot
 - Hibernate (JPA)
-- RESTful API
-- Scanner para la entrada del usuario
+  
 
 ## Video de demostración
 
