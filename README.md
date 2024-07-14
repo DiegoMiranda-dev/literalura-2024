@@ -1,11 +1,12 @@
+![Logo_con_del proyecto Literalura](https://github.com/user-attachments/assets/a0ecf676-1235-4d92-96f6-eb98ad36bc19)
 
-![Logo_con_inciales del proyecto Literalura](https://github.com/user-attachments/assets/bcc2891d-4c7f-4999-bbb6-f0b5dbf234b5)
 ¡Literalura es una aplicación de consola que permite consultar información de cientos de libros! :) 
 
 <h2>Índice</h2>
  
 1. [Funcionalidades](#funcionalidades)
 2. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+3. [Demostración](#video-demostracion)
 
 
 ## Funcionalidades
@@ -24,6 +25,11 @@
 - RESTful API
 - Scanner para la entrada del usuario
 
+## Video de demostración
+
+[![Demo Video](http://img.youtube.com/vi/A4QGy2bg0Kk/0.jpg)](http://www.youtube.com/watch?v=A4QGy2bg0Kk)
+
+Haga clic en la imagen para ver el video de demostración.
 
 
 
