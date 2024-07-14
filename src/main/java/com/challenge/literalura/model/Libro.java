@@ -13,16 +13,33 @@ public class Libro {
     private Long id;
     @Column(unique = true)
     private String titulo;
-    private List<String> autores;
+    @OneToMany(mappedBy = "libro", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Autor> autores;
     private List<String> lenguajes;
     private String descargas;
 
-    public Libro(DatosResultados datosResultados) {
-        this.titulo = datosResultados.resultados().get(0).titulo();
-        this.autores = datosResultados.resultados().get(0).autores().stream().map(DatosResultados.DatosLibro.Autor::nombre).toList();
-        this.lenguajes = datosResultados.resultados().get(0).lenguajes();
-        this.descargas = datosResultados.resultados().get(0).descargas();
 
+    public Libro(DatosResultados datosResultados) {
+        if (!datosResultados.resultados().isEmpty()) {
+            this.titulo = datosResultados.resultados().get(0).titulo();
+            this.autores = datosResultados.resultados().get(0).autores().stream()
+                    .map(autor -> {
+                        Autor a = new Autor(
+                                autor.nombre(),
+                                autor.anoNacimiento() != null ? autor.anoNacimiento().toString() : null,
+                                autor.anoMuerte() != null ? autor.anoMuerte().toString() : null
+                        );
+                        a.setLibro(this);
+                        return a;
+                    })
+                    .collect(Collectors.toList());
+            this.lenguajes = datosResultados.resultados().get(0).lenguajes();
+            this.descargas = datosResultados.resultados().get(0).descargas();
+        }
+    }
+
+
+    public Libro() {
     }
 
 
@@ -34,11 +51,11 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    public List<String> getAutores() {
+    public List<Autor> getAutores() {
         return autores;
     }
 
-    public void setAutores(List<String> autores) {
+    public void setAutores(List<Autor> autores) {
         this.autores = autores;
     }
 
@@ -60,11 +77,10 @@ public class Libro {
 
     @Override
     public String toString() {
-        return "Libro [" +
-                "Titulo: '" + titulo + '\'' +
-                ", Autores: '" + autores + '\'' +
-                ", Lenguajes: '" + lenguajes + '\'' +
-                ", Descargas: '" + descargas + '\'' +
-                " ]";
+        return "Autor encontrado \uD83D\uDCDA " + "\n" +
+                "Titulo: " + titulo + "\n" +
+                "Autores: " + autores + "\n" +
+                "Lenguajes: " + lenguajes + "\n" +
+                "Descargas: " + descargas;
     }
 }
