@@ -1,13 +1,5 @@
-![Logo_con_del proyecto Literalura](https://github.com/user-attachments/assets/a0ecf676-1235-4d92-96f6-eb98ad36bc19)
-
+##lITERALURA
 ¡Literalura es una aplicación de consola que permite consultar información de cientos de libros! :) 
-
-<h2>Índice</h2>
- 
-1. [Funcionalidades](#funcionalidades)
-2. [Tecnologías Utilizadas](#tecnologías-utilizadas)
-3. [Demostración](#video-de-demostracion)
-
 
 ## Funcionalidades
 
@@ -19,16 +11,17 @@
 
 ## Tecnologías Utilizadas
 
-- Java
-- Spring Boot
-- Hibernate (JPA)
+- **Java**
+- **Spring Boot**
+- **Hibernate (JPA)**
+- **MAVEN**
   
 
-## Video de demostración
+## VISTA PREVIA
 
-[![Demo Video](http://img.youtube.com/vi/A4QGy2bg0Kk/0.jpg)](http://www.youtube.com/watch?v=A4QGy2bg0Kk)
 
-Haga clic en la imagen para ver el video de demostración.
+
+
 
 
 
