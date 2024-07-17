@@ -1,4 +1,4 @@
-##lITERALURA
+## lITERALURA
 ¡Literalura es una aplicación de consola que permite consultar información de cientos de libros! :) 
 
 ## Funcionalidades
